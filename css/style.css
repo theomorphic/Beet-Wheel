@@ -6,7 +6,8 @@
 
 body,
 .container,
-.spin__btn {
+.spin__btn,
+.number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -51,4 +52,40 @@ body {
   background-color: #fff;
   -webkit-clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
           clip-path: polygon(50% 0%, 15% 100%, 85% 100%);
+}
+
+.wheel {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 0 5px #333, 0 0 0 15px #fff, 0 0 0 18px #111;
+  transition: transform 5s ease-in-out;
+}
+
+.number {
+  position: absolute;
+  width: 50%;
+  height: 50%;
+  background: var(--clr);
+  transform-origin: bottom right;
+  transform: rotate(calc(45deg * var(--i)));
+  -webkit-clip-path: polygon(0 0, 56% 0, 100% 100%, 0 56%);
+          clip-path: polygon(0 0, 56% 0, 100% 100%, 0 56%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  cursor: pointer;
+}
+.number span {
+  transform: rotate(45deg);
+  font-size: 1em;
+  font-weight: 700;
+  color: #fff;
+  text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
 }/*# sourceMappingURL=style.css.map */
