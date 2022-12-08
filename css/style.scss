@@ -22,32 +22,34 @@ body{
 
 .container{
 	position: relative;
-	width: 400px;
-	height: 400px;
+	width: 650px;
+	height: 650px;
 }
 
 .spin__btn{
 	position: absolute;
-	width: 60px;
-	height: 60px;
+	width: 120px;
+	height: 120px;
 	background-color: #fff;
 	border-radius: 50%;
 	z-index: 10;
-	text-transform: uppercase;
-	font-weight: 600;
-	color: #333;
-	letter-spacing: .1em;
 	border: 4px solid rgba(0, 0, 0, 0.75);
 	cursor: pointer;
 	user-select: none;
+	
+	font-size: 1.5em;
+	font-weight: 600;
+	text-transform: uppercase;
+	letter-spacing: .1em;
+	color: #333;
 }
 
 .spin__btn::before{
 	content: "";
 	position: absolute;
-	left: -17px;
-	width: 20px;
-	height: 30px;
+	left: -36px;
+	width: 40px;
+	height: 50px;
 	background-color: #fff;
 	clip-path: polygon(100% 15%, 0 50%, 100% 85%);
 
@@ -79,7 +81,7 @@ body{
 
 	span{
 		transform: rotate(45deg);
-		font-size: 1em;
+		font-size: 1.5em;
 		font-weight: 700;
 		color: #fff;
 		text-shadow: 3px 5px 2px rgba(0, 0, 0, 0.15);
